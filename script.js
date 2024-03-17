@@ -54,6 +54,9 @@ copyBtn.addEventListener('click', () => {
    navigator.clipboard.writeText(resultElement.innerText);
 });
 
+inputElement.addEventListener('paste', e => {
+   e.preventDefault();
+});
 inputElement.addEventListener('input', e => {
    if (e.inputType !== 'insertText' || SYMBOLS.includes(e.data)) {
       inputValue = e.target.value;
