@@ -44,6 +44,7 @@ body {
 
 .input {
    border: 1px solid #ccc;
+   font-family: monospace;
    border-bottom: 2px solid #ccc;
    border-radius: 5px;
    padding: 0.7rem 0.9rem;
@@ -97,6 +98,7 @@ body {
    color: #fff;
    font-weight: 500;
    width: 85%;
+   word-wrap: break-word;
 }
 
 @keyframes rainbow-animation {
