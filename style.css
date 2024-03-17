@@ -1,0 +1,118 @@
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+:root {
+   --width: 60%;
+}
+
+body {
+   height: 100vh;
+   font-family: 'Consolas', monospace;
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   padding: 2rem;
+}
+
+.title {
+   font-size: 2.5rem;
+   font-weight: bold;
+   margin-bottom: 2rem;
+}
+.title_animation {
+   background: linear-gradient(
+      to right,
+      red,
+      orange,
+      yellow,
+      green,
+      blue,
+      indigo,
+      violet
+   );
+   background-size: 1400% 100%;
+   color: transparent;
+   background-clip: text;
+   animation: rainbow-animation 2s ease infinite;
+}
+
+.form {
+   width: var(--width);
+}
+
+.input {
+   border: 1px solid #ccc;
+   border-bottom: 2px solid #ccc;
+   border-radius: 5px;
+   padding: 0.7rem 0.9rem;
+   outline: none;
+   transition: border 0.2s;
+   font-size: 1rem;
+   width: 100%;
+}
+.input:focus {
+   border-color: #5868de;
+}
+
+.allowed {
+   font-size: 0.9rem;
+   margin-top: 10px;
+   color: #bcbcbc;
+}
+.symbols {
+   color: #828282;
+}
+
+.result {
+   width: var(--width);
+   min-height: 200px;
+   margin-top: 1rem;
+   border-radius: 10px;
+   background-color: #3c3c3c;
+   position: relative;
+   padding: 1rem;
+   overflow: auto;
+}
+.copy {
+   position: absolute;
+   top: 7px;
+   right: 7px;
+   padding: 6px 9px;
+   background: transparent;
+   border: 1px solid #11d1e2;
+   border-radius: 5px;
+   color: #11d1e2;
+   font-weight: bold;
+   outline: none;
+   transition: background 0.2s, color 0.2s;
+}
+.copy:hover {
+   background-color: #11d1e2;
+   color: #fff;
+}
+
+.text {
+   color: #fff;
+   font-weight: 500;
+   width: 85%;
+}
+
+@keyframes rainbow-animation {
+   0% {
+      background-position: 0% 50%;
+   }
+   50% {
+      background-position: 100% 50%;
+   }
+   100% {
+      background-position: 0% 50%;
+   }
+}
+
+@media screen and (max-width: 1080px) {
+   :root {
+      --width: 85%;
+   }
+}
