@@ -22,16 +22,7 @@ body {
    margin-bottom: 2rem;
 }
 .title_animation {
-   background: linear-gradient(
-      to right,
-      red,
-      orange,
-      yellow,
-      green,
-      blue,
-      indigo,
-      violet
-   );
+   background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
    background-size: 1400% 100%;
    color: transparent;
    -webkit-text-fill-color: transparent;
@@ -59,14 +50,21 @@ body {
 .input:focus {
    border-color: #5868de;
 }
-
-.allowed {
-   font-size: 0.9rem;
-   margin-top: 10px;
+.sub {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-top: 5px;
    color: #bcbcbc;
+   font-size: 1rem;
 }
-.symbols {
+.darker {
    color: #828282;
+}
+.checkbox {
+   user-select: none;
+   display: flex;
+   gap: 10px;
 }
 
 .result {
@@ -119,5 +117,11 @@ body {
 @media screen and (max-width: 1080px) {
    :root {
       --width: 85%;
+   }
+}
+@media screen and (max-width: 632px) {
+   .sub {
+      flex-direction: column;
+      align-items: flex-start;
    }
 }

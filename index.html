@@ -1,25 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
-      <link rel="stylesheet" href="./style.css" />
-      <title>Madness</title>
-   </head>
-   <body>
-      <h1 class="title">Get <span class="title_animation">Madness</span></h1>
-      <form class="form">
-         <input type="text" id="prompt" class="input" placeholder="Enter prompt" />
-         <small class="allowed"
-            >Allowed symbols:
-            <span class="symbols">␣-0123456789NOabcdefijlnorstu[]</span></small
-         >
-      </form>
-      <div class="result">
-         <p id="result" class="text"></p>
-         <button id="copy" class="copy">Copy!</button>
+
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
+   <link rel="stylesheet" href="./style.css" />
+   <title>Madness</title>
+</head>
+
+<body>
+   <h1 class="title">Get <span class="title_animation">Madness</span></h1>
+   <form class="form" id="form">
+      <input type="text" id="prompt" class="input" autofocus spellcheck="false" placeholder="Enter prompt" />
+      <div class="sub">
+         <small>Allowed symbols:
+            <span class="darker">␣-0123456789ABEFINORSabcdefgijlmnoprstuvxy{}()[]</span>
+         </small>
+         <small class="checkbox"><input type="checkbox" id="allow_missing" />
+            <label for="allow_missing" class="darker">Allow missing symbols</label></small>
       </div>
-      <script src="./script.js"></script>
-   </body>
+   </form>
+   <div class="result">
+      <p id="result" class="text"></p>
+      <button id="copy" class="copy">Copy!</button>
+   </div>
+   <script type="module" src="./js/script.js"></script>
+</body>
+
 </html>
