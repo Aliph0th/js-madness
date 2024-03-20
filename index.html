@@ -11,13 +11,13 @@
 
 <body>
    <div class="tabs">
-      <button class="tab_btn" data-tab="encode">Encode</button>
-      <button class="tab_btn active" data-tab="decode">Decode</button>
+      <button class="tab_btn active" data-tab="encode">Encode</button>
+      <button class="tab_btn" data-tab="decode">Decode</button>
    </div>
    <h1 class="title"
       title="[]+((+[])[({}+[])[-~-~-~-~-~+[]]+({}+[])[+!+[]]+([][[]]+[])[+!+[]]+(![]+[])[-~-~-~+[]]+(!![]+[])[+[]]+(!![]+[])[+!+[]]+([][[]]+[])[+[]]+({}+[])[-~-~-~-~-~+[]]+(!![]+[])[+[]]+({}+[])[+!+[]]+(!![]+[])[+!+[]]]+[])[+!+[]+[+!![]]]+(![]+[])[-~+[]]+([][[]]+[])[+!+[]+[+[]]-(-~-~+[])]+([][[]]+[])[+!+[]]+(!![]+[])[-~-~+!+[]]+(![]+[])[-~-~-~+[]]+(![]+[])[-~-~-~+[]]">
       Get <span class="rainbow">Madness</span></h1>
-   <div id="encode" class="tab" hidden>
+   <div id="encode" class="tab">
       <form id="encode_form">
          <input type="text" id="encode_prompt" class="input" autofocus spellcheck="false" placeholder="Enter prompt" />
          <div class="sub">
@@ -33,7 +33,7 @@
          <button class="copy">Copy!</button>
       </div>
    </div>
-   <div id="decode" class="tab">
+   <div id="decode" class="tab" hidden>
       <form id="decode_form">
          <textarea autofocus spellcheck="false" id="decode_prompt" class="input textarea"
             placeholder="Enter only madness-code"></textarea>
