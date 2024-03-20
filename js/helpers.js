@@ -4,6 +4,7 @@ import {
    FILTER_REGEX,
    SYMBOLS
 } from './constants.js';
+import { tabBtns, tabs } from './elements.js';
 
 export const tokenize = text => {
    const tokens = ['[]'];
@@ -35,3 +36,20 @@ export const escaped = string => {
    return string.replace(/[.*+\-?^${}()|[\]\\]/g, '\\$&');
 };
 export const filterPaste = text => text.replace(FILTER_REGEX, '');
+export const debounce = (fn, ms) => {
+   let timeout;
+   return function () {
+      clearTimeout(timeout);
+      timeout = setTimeout(() => fn.apply(this, arguments), ms);
+   };
+};
+export const openTab = e => {
+   const tabID = e.target.dataset.tab;
+   for (let i = 0; i < tabs.length; i++) {
+      tabs[i].setAttribute('hidden', true);
+      tabBtns[i].classList.remove('active');
+   }
+
+   document.getElementById(tabID).removeAttribute('hidden');
+   e.target.classList.add('active');
+};

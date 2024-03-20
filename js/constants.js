@@ -78,3 +78,46 @@ export const COMPLEX_TOKENS_FILTER = [
 export const DELETE_CONTENT_INSERT_TYPE = /^deleteContent(Forward|Backward)$/;
 export const FILTER_REGEX = new RegExp(`[^${escaped(SYMBOLS.join(''))}]`, 'g');
 export const DISALLOWED_REGEX = new RegExp(`^${FILTER_REGEX.source}+`, '');
+export const DEBOUNCE_DELAY = 300;
+export const EASTER_EGG_TEXT = ['get madness', 'js madness'];
+export const FORBIDDEN_WORDS = [
+   'document',
+   'window',
+   'fetch',
+   'eval',
+   'Function',
+   'XMLHttpRequest',
+   'setTimeout',
+   'setInterval',
+   'Worker',
+   'Clipboard',
+   'postMessage',
+   'this',
+   'globalThis',
+   'Element',
+   'import',
+   'export',
+   'Promise',
+   'Object',
+   'Number',
+   'Map',
+   'Array',
+   'Set',
+   'RegExp',
+   'Boolean',
+   'String',
+   'Symbol',
+   'BigInt',
+   'null',
+   'undefined',
+   'if',
+   'else',
+   'with',
+   'switch',
+   'case',
+   'with',
+   'delete',
+   'for',
+   'while',
+   'return'
+];

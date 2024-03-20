@@ -13,7 +13,7 @@ body {
    display: flex;
    align-items: center;
    flex-direction: column;
-   padding-top: 2rem;
+   padding-top: 2.8rem;
 }
 
 .title {
@@ -21,7 +21,8 @@ body {
    font-weight: bold;
    margin-bottom: 2rem;
 }
-.title_animation {
+
+.rainbow {
    background: linear-gradient(
       to right,
       red,
@@ -41,7 +42,39 @@ body {
    animation: rainbow-animation 2s ease infinite;
 }
 
-.form {
+.darker {
+   color: #828282;
+}
+
+.tabs {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 1.8rem;
+   display: flex;
+}
+.tab_btn {
+   width: 50%;
+   background: none;
+   border: none;
+   outline: none;
+   transition: 0.2s;
+   font-size: 1rem;
+   font-family: monospace;
+   background-color: #e5e5e5;
+   border-right: 1px solid #ccc;
+   border-bottom: 1px solid #ccc;
+}
+.tab_btn.active {
+   background-color: #fff;
+   border-bottom: none;
+}
+.tab_btn:not(.active):hover {
+   background-color: #ccc;
+}
+
+.tab {
    width: var(--width);
 }
 
@@ -68,9 +101,6 @@ body {
    color: #bcbcbc;
    font-size: 1rem;
 }
-.darker {
-   color: #828282;
-}
 .symbols {
    word-break: break-all;
 }
@@ -80,8 +110,14 @@ body {
    gap: 10px;
 }
 
+.textarea {
+   resize: vertical;
+   min-height: 150px;
+   max-height: 350px;
+}
+
 .result {
-   width: var(--width);
+   width: 100%;
    min-height: 200px;
    max-height: calc(100% - 14rem);
    margin-top: 1rem;
@@ -90,6 +126,9 @@ body {
    position: relative;
    padding: 1rem;
    overflow: auto;
+}
+.decode_result {
+   min-height: 80px;
 }
 .copy {
    position: absolute;
@@ -107,6 +146,18 @@ body {
 .copy:hover {
    background-color: #11d1e2;
    color: #fff;
+}
+.error {
+   background: #7a33339c;
+   padding: 2px 7px;
+   border-radius: 5px;
+   color: #ff6464;
+}
+.wtf {
+   background: #2f55709c;
+   padding: 2px 7px;
+   border-radius: 5px;
+   color: #64d6ff;
 }
 
 .text {

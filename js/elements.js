@@ -1,0 +1,10 @@
+export const encodeResultEl = document.getElementById('encode_result');
+export const encodeInputEl = document.getElementById('encode_prompt');
+export const encodeFormEl = document.getElementById('encode_form');
+export const decodeResultEl = document.getElementById('decode_result');
+export const decodeInputEl = document.getElementById('decode_prompt');
+export const decodeFormEl = document.getElementById('decode_form');
+export const checkboxElement = document.getElementById('allow_missing');
+export const copyBtns = [...document.getElementsByClassName('copy')];
+export const tabBtns = [...document.getElementsByClassName('tab_btn')];
+export const tabs = [...document.getElementsByClassName('tab')];
