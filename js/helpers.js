@@ -7,7 +7,7 @@ import {
 import { tabBtns, tabs } from './elements.js';
 
 export const tokenize = text => {
-   const tokens = ['[]'];
+   const tokens = [];
    while (text) {
       let wasDetected = false;
       COMPLEX_TOKENS_FILTER.forEach(regex => {
