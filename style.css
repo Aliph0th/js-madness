@@ -152,6 +152,7 @@ body {
    padding: 2px 7px;
    border-radius: 5px;
    color: #ff6464;
+   line-height: 1.4;
 }
 .wtf {
    background: #2f55709c;
@@ -196,6 +197,15 @@ body {
    flex-direction: row;
    justify-content: flex-end;
    gap: 8px;
+}
+
+.tooltip {
+   position: absolute;
+   top: -150%;
+   font-size: 0.8rem;
+   color: #ccc;
+   text-align: center;
+   display: none;
 }
 
 @keyframes rainbow-animation {

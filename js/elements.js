@@ -8,3 +8,4 @@ export const checkboxElement = document.getElementById('allow_missing');
 export const copyBtns = [...document.getElementsByClassName('copy')];
 export const tabBtns = [...document.getElementsByClassName('tab_btn')];
 export const tabs = [...document.getElementsByClassName('tab')];
+export const tooltipBoxes = [...document.getElementsByClassName('tooltiped')];

@@ -3,7 +3,7 @@ import { escaped } from './helpers.js';
 export const CONSTRUCTOR =
    '({}+[])[-~-~-~-~-~+[]]+({}+[])[+!+[]]+([][[]]+[])[+!+[]]+(![]+[])[-~-~-~+[]]+(!![]+[])[+[]]+(!![]+[])[+!+[]]+([][[]]+[])[+[]]+({}+[])[-~-~-~-~-~+[]]+(!![]+[])[+[]]+({}+[])[+!+[]]+(!![]+[])[+!+[]]';
 export const TOKENS_MAP = {
-   undefined: '[][[]]+[]',
+   undefined: '([][[]]+[])',
    false: '(![]+[])',
    true: '(!![]+[])',
    '[object Object]': '({}+[])',
@@ -118,5 +118,8 @@ export const FORBIDDEN_WORDS = [
    'delete',
    'for',
    'while',
-   'return'
+   'return',
+   'const',
+   'let',
+   'var'
 ];

@@ -13,9 +13,10 @@ import {
    encodeFormEl,
    encodeInputEl,
    encodeResultEl,
-   tabBtns
+   tabBtns,
+   tooltipBoxes
 } from './elements.js';
-import { debounce, filterPaste, openTab, tokenize } from './helpers.js';
+import { debounce, filterPaste, openTab, toggleTooltip, tokenize } from './helpers.js';
 
 tabBtns.forEach(btn => {
    btn.addEventListener('click', openTab);
@@ -26,6 +27,12 @@ copyBtns.forEach(btn => {
       navigator.clipboard.writeText(btn.previousElementSibling.innerText);
    });
 });
+
+tooltipBoxes.forEach(box => {
+   box.addEventListener('mouseenter', e => toggleTooltip(true, e));
+   box.addEventListener('mouseleave', e => toggleTooltip(false, e));
+});
+
 encodeFormEl.addEventListener('submit', e => e.preventDefault());
 encodeFormEl.addEventListener('input', () => {
    const text = checkboxElement.checked
@@ -66,8 +73,7 @@ const evaluateSequence = debounce(text => {
       }
    }
    try {
-      const fn = new Function(`return ${text}`);
-      decodeResultEl.innerText = fn().toString();
+      decodeResultEl.innerText = eval(text);
    } catch (error) {
       decodeResultEl.innerHTML = `<span class="error">${error.message}</span>`;
    }

@@ -53,3 +53,7 @@ export const openTab = e => {
    document.getElementById(tabID).removeAttribute('hidden');
    e.target.classList.add('active');
 };
+export const toggleTooltip = (isShown, e) => {
+   const tooltip = e.target.querySelector('.tooltip');
+   tooltip.style.display = isShown ? 'block' : 'none';
+};
