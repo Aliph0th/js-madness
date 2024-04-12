@@ -38,7 +38,6 @@ encodeFormEl.addEventListener('input', () => {
    const text = checkboxElement.checked
       ? encodeInputEl.value
       : filterPaste(encodeInputEl.value);
-   encodeInputEl.value = text;
    if (EASTER_EGG_TEXT.includes(text)) {
       encodeResultEl.classList.add('rainbow');
    } else {
